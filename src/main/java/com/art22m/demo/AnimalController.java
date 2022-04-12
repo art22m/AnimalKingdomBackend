@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AnimalController {
+    @Autowired
+    private AnimalService animalService;
 
     @RequestMapping("/get_animal/{animalName}")
     public Animal getAnimal(@PathVariable String animalName) {
-
+        return animalService.getAnimal(animalName);
     }
-
 }
