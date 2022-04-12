@@ -2,7 +2,9 @@ package com.art22m.demo;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @Service
 public class AnimalService {
@@ -21,7 +23,9 @@ public class AnimalService {
         return animals.get(animalName);
     }
 
-    public HashMap<String, Animal> getAnimals() {
-        return animals;
+    public List<Animal> getAnimals() {
+        List<Animal> animalsList = new ArrayList<>(animals.values());
+
+        return animalsList;
     }
 }

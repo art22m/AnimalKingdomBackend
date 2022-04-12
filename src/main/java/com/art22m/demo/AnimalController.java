@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 
 @RestController
 public class AnimalController {
@@ -18,7 +19,7 @@ public class AnimalController {
     }
 
     @RequestMapping("/get_all_animals/")
-    public HashMap<String, Animal> getAnimals() {
+    public List<Animal> getAnimals() {
         return animalService.getAnimals();
     }
 }
