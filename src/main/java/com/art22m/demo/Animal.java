@@ -8,6 +8,15 @@ public class Animal {
     String lastName;
     String title;
 
+    public Animal(String avatar, String bio, String firstName, String id, String lastName, String title) {
+        this.avatar = avatar;
+        this.bio = bio;
+        this.firstName = firstName;
+        this.id = id;
+        this.lastName = lastName;
+        this.title = title;
+    }
+
     public String getAvatar() {
         return avatar;
     }
