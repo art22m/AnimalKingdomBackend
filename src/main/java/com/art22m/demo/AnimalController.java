@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+
 @RestController
 public class AnimalController {
     @Autowired
@@ -13,5 +15,10 @@ public class AnimalController {
     @RequestMapping("/get_animal/{animalName}")
     public Animal getAnimal(@PathVariable String animalName) {
         return animalService.getAnimal(animalName);
+    }
+
+    @RequestMapping("/get_all_animals/")
+    public HashMap<String, Animal> getAnimals() {
+        return animalService.getAnimals();
     }
 }
