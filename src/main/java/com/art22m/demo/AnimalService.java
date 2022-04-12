@@ -19,6 +19,10 @@ public class AnimalService {
                 "Arctic Developer"));
     }
 
+    public void addAnimal(Animal animal) {
+        animals.put(animal.getFirstName(), animal);
+    }
+
     public Animal getAnimal(String animalName) {
         return animals.get(animalName);
     }
@@ -27,5 +31,9 @@ public class AnimalService {
         List<Animal> animalsList = new ArrayList<>(animals.values());
 
         return animalsList;
+    }
+
+    Boolean isValid(Animal animal) {
+        return true;
     }
 }
